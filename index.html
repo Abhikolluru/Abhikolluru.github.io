@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Kolluru Abhishek | Computer Science Lecturer & Developer</title>
+    <title>Abhishek Sharma | Software Developer</title>
 
-    <meta name="description" content="Official portfolio of Kolluru Abhishek, Computer Science Lecturer, MCA graduate and developer. Explore education, skills, teaching experience and projects.">
+    <meta name="description"
+          content="Portfolio of Abhishek Sharma — Software Developer, MCA graduate, Python, Java, SQL and AI/ML enthusiast.">
 
-    <meta name="keywords" content="Kolluru Abhishek, Abhishek Kolluru, Computer Science Lecturer, MCA Graduate, Python, Java, Web Developer">
-
-    <meta name="author" content="Kolluru Abhishek">
+    <meta name="author" content="Abhishek Sharma">
 
     <style>
         * {
@@ -21,48 +20,75 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
-            background: #0b1120;
-            color: white;
-            line-height: 1.6;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0a0f1c;
+            color: #f8fafc;
+            line-height: 1.7;
         }
 
+        /* NAVBAR */
+
         nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 10%;
-            background: #111827;
-            position: sticky;
-            top: 0;
+
+            padding: 18px 8%;
+
+            background: rgba(10, 15, 28, 0.95);
+            border-bottom: 1px solid #1e293b;
         }
 
         nav h2 {
             color: #38bdf8;
+            font-size: 25px;
+        }
+
+        nav div {
+            display: flex;
+            gap: 25px;
         }
 
         nav a {
-            color: white;
+            color: #cbd5e1;
             text-decoration: none;
-            margin-left: 20px;
+            font-weight: 500;
         }
 
         nav a:hover {
             color: #38bdf8;
         }
 
+        /* HERO */
+
         .hero {
             min-height: 90vh;
+
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+
             text-align: center;
-            padding: 30px;
+            padding: 40px 20px;
+
+            background:
+                radial-gradient(circle at top, #172554 0%, #0a0f1c 55%);
+        }
+
+        .hero .tag {
+            color: #38bdf8;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
         }
 
         .hero h1 {
-            font-size: 55px;
+            font-size: 58px;
             margin-bottom: 10px;
         }
 
@@ -71,108 +97,224 @@
         }
 
         .hero h2 {
-            font-size: 25px;
             color: #94a3b8;
+            font-size: 26px;
             margin-bottom: 20px;
         }
 
         .hero p {
-            max-width: 650px;
+            max-width: 720px;
             color: #cbd5e1;
             font-size: 18px;
         }
 
-        .btn {
-            display: inline-block;
-            margin-top: 25px;
-            padding: 12px 25px;
-            background: #38bdf8;
-            color: #0b1120;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
+        .buttons {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+
+            border-radius: 8px;
+
+            text-decoration: none;
+            font-weight: bold;
+
+            background: #38bdf8;
+            color: #07111f;
+
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(56, 189, 248, 0.25);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #38bdf8;
+            border: 1px solid #38bdf8;
+        }
+
+        /* SECTIONS */
+
         section {
-            padding: 70px 10%;
+            padding: 80px 8%;
         }
 
         section h2 {
-            color: #38bdf8;
-            font-size: 32px;
-            margin-bottom: 25px;
             text-align: center;
+            color: #38bdf8;
+            font-size: 36px;
+            margin-bottom: 45px;
         }
 
+        /* ABOUT */
+
         .about {
-            max-width: 800px;
+            max-width: 850px;
             margin: auto;
             text-align: center;
             color: #cbd5e1;
             font-size: 18px;
         }
 
+        /* CARDS */
+
         .cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
         }
 
         .card {
             background: #111827;
-            padding: 25px;
-            border-radius: 10px;
             border: 1px solid #1e293b;
+            border-radius: 14px;
+
+            padding: 28px;
+
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: #38bdf8;
         }
 
         .card h3 {
             color: #38bdf8;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            font-size: 22px;
         }
 
         .card p {
             color: #cbd5e1;
         }
 
+        .card ul {
+            padding-left: 20px;
+            color: #cbd5e1;
+        }
+
+        /* SKILLS */
+
         .skills {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 12px;
+            gap: 14px;
+            max-width: 900px;
+            margin: auto;
         }
 
         .skill {
-            background: #1e293b;
             padding: 10px 18px;
-            border-radius: 20px;
+            border-radius: 25px;
+
+            background: #111827;
+            border: 1px solid #334155;
+
+            color: #e2e8f0;
+
+            transition: 0.3s;
         }
+
+        .skill:hover {
+            border-color: #38bdf8;
+            color: #38bdf8;
+        }
+
+        /* PROJECT */
+
+        .project-card {
+            position: relative;
+        }
+
+        .project-tech {
+            margin: 18px 0;
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+        .project-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .small-btn {
+            padding: 9px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+
+            background: #38bdf8;
+            color: #07111f;
+        }
+
+        .small-btn.outline {
+            background: transparent;
+            color: #38bdf8;
+            border: 1px solid #38bdf8;
+        }
+
+        /* CONTACT */
 
         .contact {
             text-align: center;
+            background: #0f172a;
         }
+
+        .contact p {
+            color: #cbd5e1;
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        /* FOOTER */
 
         footer {
-            background: #111827;
             text-align: center;
-            padding: 20px;
-            color: #94a3b8;
+            padding: 25px;
+            color: #64748b;
+            background: #080c16;
+            border-top: 1px solid #1e293b;
         }
 
+        /* MOBILE */
+
         @media(max-width: 700px) {
-            .hero h1 {
-                font-size: 38px;
-            }
 
             nav {
                 flex-direction: column;
+                gap: 12px;
             }
 
             nav div {
-                margin-top: 10px;
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
             }
 
-            nav a {
-                margin: 5px;
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero h2 {
+                font-size: 21px;
+            }
+
+            section {
+                padding: 60px 6%;
             }
         }
     </style>
@@ -180,7 +322,10 @@
 
 <body>
 
+<!-- NAVIGATION -->
+
 <nav>
+
     <h2>Abhishek.</h2>
 
     <div>
@@ -190,46 +335,75 @@
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
     </div>
+
 </nav>
 
 
+<!-- HERO -->
+
 <div class="hero">
 
-    <h1>Hi, I'm <span>Kolluru Abhishek</span></h1>
+    <div class="tag">👋 Welcome to my portfolio</div>
 
-    <h2>Computer Science Lecturer & Developer</h2>
+    <h1>I'm <span>Abhishek Sharma</span></h1>
+
+    <h2>Software Developer | Python | Java | AI/ML</h2>
 
     <p>
-        MCA graduate passionate about teaching Computer Science,
-        programming, web development and Artificial Intelligence.
-        I enjoy helping students understand technology in a simple
-        and practical way.
+        MCA graduate passionate about software development,
+        programming, databases, artificial intelligence and
+        building practical real-world applications.
     </p>
 
-    <a href="#about" class="btn">Know More About Me</a>
+    <div class="buttons">
+
+        <a href="#projects" class="btn">
+            🚀 View My Projects
+        </a>
+
+        <a href="https://github.com/Abhikolluru"
+           target="_blank"
+           class="btn btn-outline">
+            GitHub
+        </a>
+
+    </div>
 
 </div>
 
+
+<!-- ABOUT -->
 
 <section id="about">
 
     <h2>About Me</h2>
 
     <div class="about">
-        <p>
-            I am Kolluru Abhishek, an MCA graduate and Computer Science
-            Lecturer. I am interested in programming, teaching,
-            web development, Artificial Intelligence and building
-            useful software applications.
 
-            My goal is to continuously improve my technical knowledge
-            and help students learn technology through simple
-            explanations and practical examples.
+        <p>
+            I am an MCA graduate with a strong interest in
+            software development and modern technologies.
+            I enjoy developing applications using Python and Java,
+            working with databases, and exploring Artificial
+            Intelligence and Machine Learning.
         </p>
+
+        <br>
+
+        <p>
+            I also have experience teaching Computer Science
+            subjects and explaining programming concepts through
+            practical examples. My goal is to continuously improve
+            my technical skills and build useful software that
+            solves real-world problems.
+        </p>
+
     </div>
 
 </section>
 
+
+<!-- EDUCATION -->
 
 <section id="education">
 
@@ -238,25 +412,36 @@
     <div class="cards">
 
         <div class="card">
-            <h3>Master of Computer Applications (MCA)</h3>
+
+            <h3>🎓 Master of Computer Applications</h3>
+
             <p>
-                Completed MCA with a strong interest in software development,
-                databases, programming and modern technologies.
+                MCA graduate with a strong foundation in
+                programming, databases, software development,
+                Artificial Intelligence and Machine Learning.
             </p>
+
         </div>
 
+
         <div class="card">
-            <h3>B.Sc Computer Science & Electronics</h3>
+
+            <h3>🎓 B.Sc Computer Science & Electronics</h3>
+
             <p>
                 Built a strong foundation in Computer Science,
-                Electronics and Programming.
+                programming, electronics, databases and
+                problem solving.
             </p>
+
         </div>
 
     </div>
 
 </section>
 
+
+<!-- SKILLS -->
 
 <section id="skills">
 
@@ -266,57 +451,134 @@
 
         <span class="skill">Python</span>
         <span class="skill">Java</span>
+        <span class="skill">C</span>
+        <span class="skill">C++</span>
+        <span class="skill">SQL</span>
+        <span class="skill">MySQL</span>
+        <span class="skill">SQLite</span>
         <span class="skill">HTML</span>
         <span class="skill">CSS</span>
         <span class="skill">JavaScript</span>
-        <span class="skill">SQL</span>
-        <span class="skill">DBMS</span>
-        <span class="skill">MongoDB</span>
-        <span class="skill">Node.js</span>
+        <span class="skill">Pandas</span>
+        <span class="skill">NumPy</span>
+        <span class="skill">Scikit-learn</span>
+        <span class="skill">Machine Learning</span>
         <span class="skill">Artificial Intelligence</span>
-        <span class="skill">IoT</span>
+        <span class="skill">Streamlit</span>
+        <span class="skill">Git</span>
+        <span class="skill">GitHub</span>
+        <span class="skill">VS Code</span>
 
     </div>
 
 </section>
 
+
+<!-- PROJECTS -->
 
 <section id="projects">
 
-    <h2>Projects</h2>
+    <h2>Featured Projects</h2>
 
     <div class="cards">
 
-        <div class="card">
-            <h3>Training & Placement Cell Portal</h3>
+
+        <!-- ENERGY PROJECT -->
+
+        <div class="card project-card">
+
+            <h3>⚡ Energy AI – Energy Consumption Forecasting</h3>
 
             <p>
-                A full-stack web application designed for managing
-                student information and placement-related activities.
-                Developed using modern web technologies and MongoDB.
+                A machine learning web application that forecasts
+                electricity consumption using real-world household
+                electricity data.
             </p>
+
+            <div class="project-tech">
+
+                <strong>Technologies:</strong><br>
+
+                Python • Pandas • NumPy • Scikit-learn •
+                Random Forest • Streamlit • Plotly
+
+            </div>
+
+            <p>
+                Features include historical energy analysis,
+                interactive visualizations, actual vs predicted
+                comparison and next 24-hour forecasting.
+            </p>
+
+            <div class="project-buttons">
+
+                <a href="https://energy-forecasting-abhi.streamlit.app/"
+                   target="_blank"
+                   class="small-btn">
+                    🚀 Live Demo
+                </a>
+
+                <a href="https://github.com/Abhikolluru/Energy_Forecasting"
+                   target="_blank"
+                   class="small-btn outline">
+                    💻 GitHub
+                </a>
+
+            </div>
+
         </div>
 
 
-        <div class="card">
-            <h3>Student Management System</h3>
+        <!-- STUDENT MANAGEMENT -->
+
+        <div class="card project-card">
+
+            <h3>🎓 Student Management System</h3>
 
             <p>
-                A web-based system for managing student information
-                efficiently using Java, JSP, HTML, CSS and database
-                technologies.
+                A database-oriented application designed to manage
+                student information and perform common operations
+                such as creating, reading, updating and deleting
+                records.
             </p>
+
+            <div class="project-tech">
+
+                <strong>Technologies:</strong><br>
+
+                Python • SQL • Database Management
+
+            </div>
+
+            <p>
+                Demonstrates database connectivity, CRUD operations
+                and application-level data management.
+            </p>
+
         </div>
 
 
-        <div class="card">
-            <h3>Programming Education</h3>
+        <!-- LEARNING PROJECT -->
+
+        <div class="card project-card">
+
+            <h3>🤖 AI & Programming Projects</h3>
 
             <p>
-                Teaching programming concepts including Python,
-                databases, Artificial Intelligence, Digital Logic
-                Design and Internet of Things.
+                A collection of programming and AI/ML learning
+                projects focused on Python programming, data
+                analysis, machine learning and practical
+                application development.
             </p>
+
+            <div class="project-tech">
+
+                <strong>Focus:</strong><br>
+
+                Python • AI • Machine Learning • Data Analysis
+
+            </div>
+
         </div>
 
     </div>
@@ -324,25 +586,42 @@
 </section>
 
 
+<!-- CONTACT -->
+
 <section id="contact" class="contact">
 
-    <h2>Contact Me</h2>
+    <h2>Let's Connect</h2>
 
     <p>
-        Interested in connecting with me for technology,
-        education or development opportunities?
+        I'm interested in software development opportunities,
+        technology projects and learning new technologies.
     </p>
 
-    <a href="https://github.com/Abhikolluru" class="btn">
-        View My GitHub
-    </a>
+    <div class="buttons">
+
+        <a href="https://github.com/Abhikolluru"
+           target="_blank"
+           class="btn">
+            💻 GitHub
+        </a>
+
+        <a href="mailto:abhishekharmakolluru@gmail.com"
+           class="btn btn-outline">
+            📧 Email Me
+        </a>
+
+    </div>
 
 </section>
 
 
+<!-- FOOTER -->
+
 <footer>
 
-    <p>© 2026 Kolluru Abhishek. All Rights Reserved.</p>
+    <p>
+        © 2026 Abhishek Sharma • Built with HTML & CSS
+    </p>
 
 </footer>
 
